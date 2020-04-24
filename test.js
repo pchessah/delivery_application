@@ -1,16 +1,55 @@
-function convertToRoman(num) {
-  if (isNaN(num))
-         return NaN;
-     var digits = String(+num).split(""),
-         key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
-                "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
-                "","I","II","III","IV","V","VI","VII","VIII","IX"],
-         roman = "",
-         i = 3;
-     while (i--)
-         roman = (key[+digits.pop() + (i * 10)] || "") + roman;
-     return Array(+digits.join("") + 1).join("M") + roman;
- }
- 
- console.log(convertToRoman(1824)); 
- 
+// function gradingStudents(grades) {
+//   let gradesArr = [...grades];
+//   let n = gradesArr[0];
+//   let ans = [];
+
+//   for (let i = 0; i < grades.length; i++) {
+//     if ( grades[0]<61) {
+//       console.log(n);
+//       if (grades[i] % 5 >= 3 && grades[i] > 37 && grades[i] < 101) {
+//         let a = Math.ceil(grades[i] / 5) * 5;
+//         ans = [...ans, a];
+//       } else if (grades[i] > 37 && grades[i] < 101) {
+//         ans = [...ans, grades[i]];
+//       } else if (grades[i] < 37 && grades[i] > -1) {
+//         ans = [...ans, grades[i]];
+//       }
+//     }
+//   }
+
+//   console.log(ans);
+
+//   return ans; // Write your code here
+// }
+
+// gradingStudents([90, 73, 67, 38, 33]);
+
+let n = 7;
+const ar = [10, 2, 10,10,10, 2, 1, 3, 2];
+
+
+function sockMerchant() {
+
+  var counts ={}
+  let total =[]
+  ar.forEach(function(x){ counts[x] = (counts[x] || 0 )+1})  
+  // console.log(counts);
+  
+  for(let key in counts){
+    if(counts.hasOwnProperty(key)){
+      if((counts[key]/2)>=1){
+        total =[...total, Math.floor(counts[key]/2)]       
+             
+      }
+    }
+  }
+  function add(t,n){
+    return t+n
+  }
+  let ans = total.reduce(add)
+  console.log(ans);
+  return ans
+
+}
+
+sockMerchant(ar)

@@ -1,0 +1,66 @@
+function rot13(str) {
+  let strArr = str.split("");
+
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr[i] === "A") {
+      strArr.splice(i, 1, "N");
+    } else if (strArr[i] === "B") {
+      strArr.splice(i, 1, "O");
+    } else if (strArr[i] === "C") {
+      strArr.splice(i, 1, "P");
+    } else if (strArr[i] === "D") {
+      strArr.splice(i, 1, "Q");
+    } else if (strArr[i] === "E") {
+      strArr.splice(i, 1, "R");
+    } else if (strArr[i] === "F") {
+      strArr.splice(i, 1, "S");
+    } else if (strArr[i] === "G") {
+      strArr.splice(i, 1, "T");
+    } else if (strArr[i] === "H") {
+      strArr.splice(i, 1, "U");
+    } else if (strArr[i] === "I") {
+      strArr.splice(i, 1, "V");
+    } else if (strArr[i] === "J") {
+      strArr.splice(i, 1, "W");
+    } else if (strArr[i] === "K") {
+      strArr.splice(i, 1, "X");
+    } else if (strArr[i] === "L") {
+      strArr.splice(i, 1, "Y");
+    } else if (strArr[i] === "M") {
+      strArr.splice(i, 1, "Z");
+    } else if (strArr[i] === "N") {
+      strArr.splice(i, 1, "A");
+    } else if (strArr[i] === "O") {
+      strArr.splice(i, 1, "B");
+    } else if (strArr[i] === "P") {
+      strArr.splice(i, 1, "C");
+    } else if (strArr[i] === "Q") {
+      strArr.splice(i, 1, "D");
+    } else if (strArr[i] === "R") {
+      strArr.splice(i, 1, "E");
+    } else if (strArr[i] === "S") {
+      strArr.splice(i, 1, "F");
+    } else if (strArr[i] === "T") {
+      strArr.splice(i, 1, "G");
+    } else if (strArr[i] === "U") {
+      strArr.splice(i, 1, "H");
+    } else if (strArr[i] === "V") {
+      strArr.splice(i, 1, "I");
+    } else if (strArr[i] === "W") {
+      strArr.splice(i, 1, "J");
+    } else if (strArr[i] === "X") {
+      strArr.splice(i, 1, "K");
+    } else if (strArr[i] === "Y") {
+      strArr.splice(i, 1, "L");
+    } else if (strArr[i] === "Z") {
+      strArr.splice(i, 1, "M");
+    }
+  }
+  let ans = strArr.join("")
+
+  console.log(ans);
+
+  return ans;
+}
+
+rot13("SERR PBQR PNZC");
