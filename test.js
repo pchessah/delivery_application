@@ -24,32 +24,42 @@
 
 // gradingStudents([90, 73, 67, 38, 33]);
 
-let n = 7;
-const ar = [10, 2, 10,10,10, 2, 1, 3, 2];
+// let n = 7;
+// const ar = [10, 2, 10,10,10, 2, 1, 3, 2];
 
+// function sockMerchant() {
 
-function sockMerchant() {
+//   var counts ={}
+//   let total =[]
+//   ar.forEach(function(x){ counts[x] = (counts[x] || 0 )+1})
+//   // console.log(counts);
 
-  var counts ={}
-  let total =[]
-  ar.forEach(function(x){ counts[x] = (counts[x] || 0 )+1})  
-  // console.log(counts);
-  
-  for(let key in counts){
-    if(counts.hasOwnProperty(key)){
-      if((counts[key]/2)>=1){
-        total =[...total, Math.floor(counts[key]/2)]       
-             
-      }
-    }
+//   for(let key in counts){
+//     if(counts.hasOwnProperty(key)){
+//       if((counts[key]/2)>=1){
+//         total =[...total, Math.floor(counts[key]/2)]
+
+//       }
+//     }
+//   }
+//   function add(t,n){
+//     return t+n
+//   }
+//   let ans = total.reduce(add)
+//   console.log(ans);
+//   return ans
+
+// }
+
+// sockMerchant(ar)
+
+function makeNegative(num) {
+  let work = num;
+  if (work < 1) {
+    return work;
   }
-  function add(t,n){
-    return t+n
-  }
-  let ans = total.reduce(add)
-  console.log(ans);
-  return ans
 
+  return -Math.abs(work);
 }
 
-sockMerchant(ar)
+makeNegative(9);
