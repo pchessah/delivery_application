@@ -1,6 +1,6 @@
 /* NAVBAR */
 .nav-Link {
-  color:black;
+  color: black;
   list-style: none;
   font-size: 1.2rem;
   transition: transform 0.8s ease;
@@ -14,7 +14,7 @@
 }
 
 .whole_navbar {
-  background-color:#fedd3e!important;
+  background-color: #fedd3e !important;
   padding: 1.2rem;
   top: 0;
 }
@@ -159,66 +159,77 @@ input::-webkit-inner-spin-button {
   width: 50rem;
   margin-top: 2rem;
   padding: 3.5rem !important;
-  background-color: #FFF0CF;
+  background-color: #fff0cf;
   padding: 10px;
   box-shadow: 5px 5px 5px 5px #888888;
 }
 
 /*customer dashboard */
-.mainDivCustomerDashboard{
+.mainDivCustomerDashboard {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: whitesmoke;
-
 }
- .customerDashboard{
-   display: flex;
-   width: 100vw;
-   flex-wrap: wrap;
-   background-color: whitesmoke;
- }
+.mainDivCustomerDashboard h2 {
+ 
+  color:black;
+  padding: 2rem;
+  height: 10rem;
+ 
+}
+.customerDashboard {
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+}
 
- .pickupsection{
-   width: 50vw;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   margin-top: 10rem;
-   margin-bottom: 10rem;
- }
+.pickupsection {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+}
 
- .vendorsection{
-   width: 50vw;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   margin-top: 10rem;
-   margin-bottom: 10rem;
- }
+.vendorsection {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+}
 
- .vendorsection div, .pickupsection div{
+.vendorsection div,
+.pickupsection div {
   border-style: solid;
-  width: 20rem;
-  height: 20rem;
-  border-width: 0.05rem;
-  box-shadow: 1px 1px 1px 1px #888888;
+  width: 25rem;
+  height: 12rem;
+  border-width: 0rem;
+ 
   transition: transform 0.8s ease;
- }
- .vendorsection div:hover, .pickupsection div:hover{
+}
+.vendorsection div:hover,
+.pickupsection div:hover {
   transform: scale(1.1);
+}
 
- }
+.vendorsection button,
+.pickupsection button {
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: gold;
+  border-width: 0.05rem;
+  width: 25rem;
+  transition: transform 0.8s ease;
+}
 
- .vendorsection button, .pickupsection button{
-   border-radius: 1rem;
-   padding:1rem;
-   background-color: gold;
-   border-width: 0.05rem;
-   width: 25rem;
-   transition: transform 0.8s ease;
- }
-
- .vendorsection button:hover, .pickupsection button:hover{
-   transform: scale(1.2);
- }
+.vendorsection button:hover,
+.pickupsection button:hover {
+  transform: scale(1.2);
+  color: white;
+  font-weight: 900;
+}
