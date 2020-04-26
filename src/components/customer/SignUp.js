@@ -6,18 +6,12 @@ function SignUp() {
     <div>
       <form className="signup">
         <div className="container signupDiv">
-          <br/>
+          <br />
           <p>Please fill in this form to create an account.</p>
           <hr />
 
-          <label for="email">
-            <b>Email</b>
-          </label>
           <input type="email" placeholder="Enter Email" name="email" required />
 
-          <label for="phone">
-            <b>Phone</b>
-          </label>
           <input
             type="number"
             placeholder="Enter Phone Number"
@@ -25,9 +19,6 @@ function SignUp() {
             required
           />
 
-          <label for="psw">
-            <b>Password</b>
-          </label>
           <input
             type="password"
             placeholder="Enter Password"
@@ -35,12 +26,9 @@ function SignUp() {
             required
           />
 
-          <label for="psw-repeat">
-            <b>Repeat Password</b>
-          </label>
           <input
             type="password"
-            placeholder="Repeat Password"
+            placeholder="Confirm Password"
             name="psw-repeat"
             required
           />
@@ -56,7 +44,9 @@ function SignUp() {
           </label>
 
           <Link to="/customer_login">
-            <p style={{ color: "dodgerblue" }}>Already have an account? Log in </p>
+            <p style={{ color: "dodgerblue" }}>
+              Already have an account? Log in{" "}
+            </p>
           </Link>
 
           <div class="clearfix">

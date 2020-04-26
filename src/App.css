@@ -1,6 +1,6 @@
 /* NAVBAR */
 .nav-Link {
-  color: white;
+  color:black;
   list-style: none;
   font-size: 1.2rem;
   transition: transform 0.8s ease;
@@ -14,7 +14,7 @@
 }
 
 .whole_navbar {
-  background-color: goldenrod !important;
+  background-color:#fedd3e!important;
   padding: 1.2rem;
   top: 0;
 }
@@ -84,8 +84,8 @@
 }
 .arrow span {
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-bottom: 5px solid #ffff;
   border-right: 5px solid #ffff;
   transform: rotate(45deg);
@@ -120,7 +120,7 @@
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
+  background: white;
 }
 
 .signup input[type="email"]:focus,
@@ -130,7 +130,7 @@ input[type="password"]:focus {
 }
 
 .signup hr {
-  border: 1px solid #f1f1f1;
+  border: 0.5px solid black;
   margin-bottom: 25px;
 }
 
@@ -159,7 +159,66 @@ input::-webkit-inner-spin-button {
   width: 50rem;
   margin-top: 2rem;
   padding: 3.5rem !important;
-  /* border: 1px solid; */
+  background-color: #FFF0CF;
   padding: 10px;
   box-shadow: 5px 5px 5px 5px #888888;
 }
+
+/*customer dashboard */
+.mainDivCustomerDashboard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+
+}
+ .customerDashboard{
+   display: flex;
+   width: 100vw;
+   flex-wrap: wrap;
+   background-color: whitesmoke;
+ }
+
+ .pickupsection{
+   width: 50vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 10rem;
+   margin-bottom: 10rem;
+ }
+
+ .vendorsection{
+   width: 50vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 10rem;
+   margin-bottom: 10rem;
+ }
+
+ .vendorsection div, .pickupsection div{
+  border-style: solid;
+  width: 20rem;
+  height: 20rem;
+  border-width: 0.05rem;
+  box-shadow: 1px 1px 1px 1px #888888;
+  transition: transform 0.8s ease;
+ }
+ .vendorsection div:hover, .pickupsection div:hover{
+  transform: scale(1.1);
+
+ }
+
+ .vendorsection button, .pickupsection button{
+   border-radius: 1rem;
+   padding:1rem;
+   background-color: gold;
+   border-width: 0.05rem;
+   width: 25rem;
+   transition: transform 0.8s ease;
+ }
+
+ .vendorsection button:hover, .pickupsection button:hover{
+   transform: scale(1.2);
+ }

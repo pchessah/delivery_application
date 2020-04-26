@@ -8,6 +8,7 @@ import SignUp from "./components/customer/SignUp";
 import ConfirmDelivery from "./components/customer/ConfirmDelivery";
 import SizeSelection from "./components/customer/SizeSelection";
 import OrderConfirmed from "./components/customer/OrderConfirmed";
+import CustomerDashboard from "./components/customer/CustomerDashboard";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/confirm_delivery" component={ConfirmDelivery} />
         <Route path="/size_selection" component={SizeSelection} />
         <Route path="/order_confirmed" component={OrderConfirmed} />
+        <Route path="/customer_dashboard" component={CustomerDashboard}/>
       </Switch>
     </>
   );

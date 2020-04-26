@@ -10,14 +10,8 @@ function LogIn() {
           <p>Log In</p>
           <hr />
 
-          <label for="email">
-            <b>Email</b>
-          </label>
           <input type="email" placeholder="Enter Email" name="email" required />
 
-          <label for="psw">
-            <b>Password</b>
-          </label>
           <input
             type="password"
             placeholder="Enter Password"
@@ -42,7 +36,7 @@ function LogIn() {
           </Link>
 
           <div class="clearfix">
-            <Link to="/">
+            <Link to="/customer_dashboard">
               <button type="submit" class="signupbtn">
                 LogIn
               </button>
