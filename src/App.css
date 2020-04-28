@@ -73,11 +73,15 @@
     float: right;
   }
 }
+@media only screen and (max-width: 500px) {
+  .arrow {
+    left: 30%;
+    position: relative;
+  }
+}
 
 .arrow {
   position: absolute;
-  /* top: 75%;
-  left: 50%; */
   top: 35%;
   left: 80%;
   transform: translate(-50%, -50%);
@@ -321,7 +325,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:#9D99FF;
+  background-color: #9d99ff;
   font-size: 1.3rem;
 }
 
@@ -331,4 +335,22 @@ textarea {
   align-items: center;
   margin-left: 8rem;
   margin-top: 1rem;
+}
+
+/*SUCCESSFUL DELIVERY */
+
+.successfulDelivery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background: url("./images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh !important;
+  margin: 0px;
+  font-family: "Baloo Bhaina 2", cursive;
+
+  color: white;
 }
