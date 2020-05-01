@@ -1,5 +1,3 @@
-
-
 /* NAVBAR */
 .nav-Link {
   color: black;
@@ -38,7 +36,6 @@
 
   color: white;
 }
-heroku
 #bg {
   width: 100%;
   height: 50% !important;
@@ -70,15 +67,15 @@ heroku
   background-color: goldenrod;
   color: white;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .home_text {
-    float: right;
+    float: right !important;
   }
 }
-@media only screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .arrow {
-    left: 30%;
-    position: relative;
+    left: 30% !important;
+    position: relative !important;
   }
 }
 
@@ -271,9 +268,9 @@ input::-webkit-inner-spin-button {
   .col-25,
   .col-75,
   input[type="submit"] {
-    width: 100%;
-    margin-top: 0;
-    margin-left: 0;
+    width: 100% !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
   }
 }
 .deliveryform1 {
