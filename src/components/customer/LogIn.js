@@ -21,7 +21,7 @@ function LogIn() {
 
           <label>
             <input
-              type="checkbox"             
+              type="checkbox"
               name="remember"
               style={{ marginBottom: "15px" }}
             />{" "}
