@@ -21,8 +21,7 @@ function LogIn() {
 
           <label>
             <input
-              type="checkbox"
-              checked="checked"
+              type="checkbox"             
               name="remember"
               style={{ marginBottom: "15px" }}
             />{" "}
@@ -35,9 +34,9 @@ function LogIn() {
             </p>
           </Link>
 
-          <div class="clearfix">
+          <div className="clearfix">
             <Link to="/customer_dashboard">
-              <button type="submit" class="signupbtn">
+              <button type="submit" className="signupbtn">
                 LogIn
               </button>
             </Link>
