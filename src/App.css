@@ -131,6 +131,7 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   align-items: center;
   background-color: whitesmoke;
+  flex-wrap: wrap;
 }
 .mainDivCustomerDashboard h2 {
   color: black;
@@ -142,10 +143,12 @@ input::-webkit-inner-spin-button {
   width: 100vw;
   flex-wrap: wrap;
   background-color: whitesmoke;
+  align-items: center;
+  justify-content: center;
 }
 
 .pickupsection {
-  width: 50vw;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -154,7 +157,7 @@ input::-webkit-inner-spin-button {
 }
 
 .vendorsection {
-  width: 50vw;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,8 +168,8 @@ input::-webkit-inner-spin-button {
 .vendorsection div,
 .pickupsection div {
   border-style: solid;
-  width: 25rem;
-  height: 12rem;
+  width: 15rem;
+  height:6rem;
   border-width: 0rem;
 
   transition: transform 0.8s ease;
@@ -182,7 +185,7 @@ input::-webkit-inner-spin-button {
   padding: 1rem;
   background-color: gold;
   border-width: 0.05rem;
-  width: 25rem;
+  width: 15rem;
   transition: transform 0.8s ease;
 }
 

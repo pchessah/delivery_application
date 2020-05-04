@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function CustomerDashboard() {
   return (
     <div className="mainDivCustomerDashboard">
-      <h2>Customer Dashboard</h2>
+      <h3>Customer Dashboard</h3>
       <div className="customerDashboard">
         <section className="pickupsection">
           <h3 style={{ paddingBottom: "1.3rem" }}>Delivery</h3>
@@ -19,7 +19,7 @@ function CustomerDashboard() {
             </div>
           </Link>
           <section style={{ marginTop: "6.5rem" }}>
-            <ul style={{ fontSize: "1.3rem" }}>
+            <ul style={{ fontSize: "0.75rem" }}>
               <li>Set pickup location</li>
               <li>Set prefered pick up time</li>
               <li>Choose delivery location</li>
@@ -43,7 +43,7 @@ function CustomerDashboard() {
             </div>
           </Link>
           <section style={{ marginTop: "6.5rem" }}>
-            <ul style={{ fontSize: "1.3rem" }}>
+            <ul style={{ fontSize: "0.75rem" }}>
               <li>Select Items from vendors</li>
               <li>Pay for items</li>
               <li>Choose delivery location</li>
