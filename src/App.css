@@ -2,7 +2,7 @@
 .nav-Link {
   color: black;
   list-style: none;
-  font-size: 1.2rem;
+  font-size: 0.6rem;
   transition: transform 0.8s ease;
 }
 
@@ -15,12 +15,12 @@
 
 .whole_navbar {
   background-color: #fedd3e !important;
-  padding: 1.2rem;
+  padding: 0.6rem;
   top: 0;
 }
 .nav_brand {
   color: white !important;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 /*HOME PAGE */
@@ -44,7 +44,7 @@
 .home_text {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0.5rem;
   float: left;
   padding-top: 7rem;
   font-size: 2rem;
