@@ -51,14 +51,14 @@
 }
 
 .home_text button {
-  margin: 1rem;
-  margin-top: 10rem;
+  margin: 0.5rem;
+  margin-top: 5rem;
   background-color: transparent;
   color: white;
   transition: transform 0.8s ease;
-  width: 30.4rem;
-  font-size: 1.2rem;
-  border-radius: 0.8rem;
+  width: 15.2rem;
+  font-size: 0.6rem;
+  border-radius: 0.4rem;
   border-width: 0.1rem;
   padding: 1rem;
 }
@@ -72,48 +72,7 @@
     float: right !important;
   }
 }
-@media screen and (max-width: 500px) {
-  .arrow {
-    left: 30% !important;
-    position: relative !important;
-  }
-}
 
-.arrow {
-  position: absolute;
-  top: 35%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-}
-.arrow span {
-  display: block;
-  width: 25px;
-  height: 25px;
-  border-bottom: 5px solid #ffff;
-  border-right: 5px solid #ffff;
-  transform: rotate(45deg);
-  margin: -10px;
-  animation: animate 2s infinite;
-}
-.arrow span:nth-child(2) {
-  animation-delay: -0.2s;
-}
-.arrow span:nth-child(3) {
-  animation-delay: -0.4s;
-}
-@keyframes animate {
-  0% {
-    opacity: 0;
-    transform: rotate(45deg) translate(-20px, -20px);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(45deg) translate(20px, 20px);
-  }
-}
 /*SIGN UP  AND LOGIN FORM*/
 .signup input[type="email"],
 .signup input[type="number"],
