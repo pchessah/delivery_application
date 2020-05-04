@@ -78,8 +78,8 @@
 .signup input[type="number"],
 .signup input[type="password"] {
   width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+  padding: 7.5px;
+  margin: 5px 0 11px 0;
   display: inline-block;
   border: none;
   background: white;
@@ -99,7 +99,7 @@ input[type="password"]:focus {
 .signup button {
   background-color: #4caf50;
   color: white;
-  padding: 14px 20px;
+  padding: 10px 12px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
@@ -118,12 +118,11 @@ input::-webkit-inner-spin-button {
 }
 
 .signupDiv {
-  width: 50rem;
+  width: 25rem;
   margin-top: 2rem;
-  padding: 3.5rem !important;
+  padding: 3rem !important;
   background-color: #fff0cf;
-  padding: 10px;
-  box-shadow: 5px 5px 5px 5px #888888;
+  box-shadow: 5px 5px 12px 12px #888888;
 }
 
 /*customer dashboard */
