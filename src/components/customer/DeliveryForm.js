@@ -144,7 +144,7 @@ function DeliveryForm(props) {
                   >
                     <Button
                       color="success"
-                      style={{ padding: "1.2rem", width: "20rem" }}
+                      style={{ padding: "1rem", width: "18rem" }}
                       onClick={toggleModal}
                     >
                       Make Order
@@ -219,7 +219,7 @@ function DeliveryForm(props) {
                   >
                     <Button
                       color="success"
-                      style={{ padding: "1.2rem", width: "20rem" }}
+                      style={{ padding: "1rem", width: "18rem" }}
                       onClick={toggleModal}
                     >
                       Make Order
@@ -292,9 +292,9 @@ function DeliveryForm(props) {
                     className="row submitButton"
                     style={{ padding: "0.4rem" }}
                   >
-                    <Button
+                      <Button
                       color="success"
-                      style={{ padding: "1.2rem", width: "20rem" }}
+                      style={{ padding: "1rem", width: "18rem" }}
                       onClick={toggleModal}
                     >
                       Make Order
