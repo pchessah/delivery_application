@@ -118,9 +118,9 @@ input::-webkit-inner-spin-button {
 }
 
 .signupDiv {
-  width: 25rem;
-  margin-top: 2rem;
-  padding: 3rem !important;
+  width: 20rem;
+  margin-top: 1rem;
+  padding: 2rem !important;
   background-color: #fff0cf;
   box-shadow: 5px 5px 12px 12px #888888;
 }
@@ -148,7 +148,6 @@ input::-webkit-inner-spin-button {
 }
 
 .pickupsection {
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -157,7 +156,6 @@ input::-webkit-inner-spin-button {
 }
 
 .vendorsection {
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,7 +167,7 @@ input::-webkit-inner-spin-button {
 .pickupsection div {
   border-style: solid;
   width: 15rem;
-  height:6rem;
+  height: 6rem;
   border-width: 0rem;
 
   transition: transform 0.8s ease;
@@ -199,8 +197,8 @@ input::-webkit-inner-spin-button {
 /*Delivery form*/
 .deliveryform {
   margin-top: 10rem;
-  width: 30rem;
-  padding: 1.5rem;
+  width: 25rem;
+  padding: 1rem;
   box-shadow: 2px 2px 20px 2px grey;
   height: auto;
 }
@@ -225,22 +223,14 @@ input::-webkit-inner-spin-button {
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25,
-  .col-75,
-  input[type="submit"] {
-    width: 100% !important;
-    margin-top: 0 !important;
-    margin-left: 0 !important;
-  }
-}
+
 .deliveryform1 {
   display: flex;
   flex-direction: column;
-  margin: 1rem;
+  margin: 1.2rem;
   width: 25rem;
   padding: 1rem;
-  padding-right: 2.9rem;
+
 }
 
 .deliveryform1 input[type="text"],
@@ -265,7 +255,6 @@ textarea {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-
 }
 
 .deliveryform1 input[type="submit"]:hover {
@@ -279,7 +268,7 @@ textarea {
 }
 
 .totalDeliveryForm {
-  padding: 1rem;
+  padding: 0.5rem;
   font-weight: 1200;
   color: white;
   display: flex;
@@ -292,8 +281,6 @@ textarea {
 .submitButton {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-left: 4.1rem;
   margin-top: 1rem;
 }
 

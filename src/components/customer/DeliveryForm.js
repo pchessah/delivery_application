@@ -85,9 +85,6 @@ function DeliveryForm(props) {
                 {/*|||||||||||||||||||||||||||||||||MORTOCYCLE||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/}
                 <form className="deliveryform1">
                   <div className="row">
-                    <div className="col-25">
-                      <label>Pick Up Location</label>
-                    </div>
                     <div className="col-75">
                       <input
                         type="text"
@@ -98,9 +95,6 @@ function DeliveryForm(props) {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-25">
-                      <label>Destination</label>
-                    </div>
                     <div className="col-75">
                       <input
                         type="text"
@@ -111,26 +105,18 @@ function DeliveryForm(props) {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-25">
-                      <label>Prefered pick up time</label>
-                    </div>
                     <div className="col-75">
                       <input
                         type="text"
                         id="lname"
                         name="lastname"
-                        placeholder="set destination"
+                        placeholder="pick up time"
                       />
                     </div>
                   </div>
                   <hr style={{ backgroundColor: "grey" }} />
 
                   <div className="row">
-                    <div className="col-25">
-                      <label>
-                        <strong>How Much? : </strong>
-                      </label>
-                    </div>
                     <div className="col-75">
                       <section className="totalDeliveryForm">
                         Ksh. 50 <FaMotorcycle />
@@ -138,17 +124,16 @@ function DeliveryForm(props) {
                     </div>
                   </div>
 
-                  <div
-                    className="row submitButton"
-                    style={{ padding: "0.4rem" }}
-                  >
+                  <div className="row submitButton">
+                  <div className="col-75">
                     <Button
                       color="success"
-                      style={{ padding: "1rem", width: "18rem" }}
+                      style={{ padding: "1rem", width: "19.2rem" }}
                       onClick={toggleModal}
                     >
                       Make Order
                     </Button>
+                    </div>
                   </div>
                 </form>
               </Col>
@@ -160,9 +145,7 @@ function DeliveryForm(props) {
                 {/*|||||||||||||||||||||||||||||||||TUKTUK||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/}
                 <form className="deliveryform1">
                   <div className="row">
-                    <div className="col-25">
-                      <label>Pick Up Location</label>
-                    </div>
+                   
                     <div className="col-75">
                       <input
                         type="text"
@@ -173,9 +156,7 @@ function DeliveryForm(props) {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-25">
-                      <label>Destination</label>
-                    </div>
+                   
                     <div className="col-75">
                       <input
                         type="text"
@@ -186,9 +167,7 @@ function DeliveryForm(props) {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-25">
-                      <label>Prefered pick up time</label>
-                    </div>
+                  
                     <div className="col-75">
                       <input
                         type="text"
@@ -201,11 +180,7 @@ function DeliveryForm(props) {
                   <hr style={{ backgroundColor: "grey" }} />
 
                   <div className="row">
-                    <div className="col-25">
-                      <label>
-                        <strong>How Much? : </strong>
-                      </label>
-                    </div>
+                   
                     <div className="col-75">
                       <section className="totalDeliveryForm">
                         Ksh. 200 <FaBabyCarriage />
@@ -219,7 +194,7 @@ function DeliveryForm(props) {
                   >
                     <Button
                       color="success"
-                      style={{ padding: "1rem", width: "18rem" }}
+                      style={{ padding: "1rem", width: "19.2rem" }}
                       onClick={toggleModal}
                     >
                       Make Order
@@ -235,9 +210,7 @@ function DeliveryForm(props) {
                 {/*|||||||||||||||||||||||||||||||||PICKUP||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/}
                 <form className="deliveryform1">
                   <div className="row">
-                    <div className="col-25">
-                      <label>Pick Up Location</label>
-                    </div>
+                  
                     <div className="col-75">
                       <input
                         type="text"
@@ -248,9 +221,7 @@ function DeliveryForm(props) {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-25">
-                      <label>Destination</label>
-                    </div>
+                  
                     <div className="col-75">
                       <input
                         type="text"
@@ -261,9 +232,7 @@ function DeliveryForm(props) {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-25">
-                      <label>Prefered pick up time</label>
-                    </div>
+                   
                     <div className="col-75">
                       <input
                         type="text"
@@ -276,11 +245,7 @@ function DeliveryForm(props) {
                   <hr style={{ backgroundColor: "grey" }} />
 
                   <div className="row">
-                    <div className="col-25">
-                      <label>
-                        <strong>How Much? : </strong>
-                      </label>
-                    </div>
+                    
                     <div className="col-75">
                       <section className="totalDeliveryForm">
                         Ksh. 510 <FaTruckPickup />
@@ -292,9 +257,9 @@ function DeliveryForm(props) {
                     className="row submitButton"
                     style={{ padding: "0.4rem" }}
                   >
-                      <Button
+                    <Button
                       color="success"
-                      style={{ padding: "1rem", width: "18rem" }}
+                      style={{ padding: "1rem", width: "19.2rem" }}
                       onClick={toggleModal}
                     >
                       Make Order
