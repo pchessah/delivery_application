@@ -1,23 +1,18 @@
-function pigIt(str) {
-  let arr = str.split(" ");
-  let ansArr = []
-
-  for (let i = 0; i < arr.length; i++) {
-    let oneWord = arr[i].split("");
-    pigWord = oneWord.shift();
-    if(pigWord.match(/^[A-Za-z]+$/)){
-
-        oneWord.push(pigWord,"a","y");
-    } else {
-        oneWord.push(pigWord);
-
+var moveZeros = function (arr) {
+  let zeroArr = []
+  let nonZero =[]
+  for(let i=0; i<arr.length; i++){
+    if(arr[i]=== 0){
+      zeroArr = [...zeroArr,arr[i]]
+    } else{
+      nonZero =[...nonZero,arr[i]]
     }
-    ansArr=[...ansArr, oneWord.join("")]
-   
+
   }
-console.log(ansArr.join(" "));
-return ansArr.join(" ")
-  //Code here
+
+  let ans =[...nonZero, ...zeroArr]
+  return(ans);
+  // TODO: Program me
 }
 
-pigIt("Quis custodiet ipsos custodes ?");
+moveZeros([false,1,0,1,2,0,1,3,"a"])
