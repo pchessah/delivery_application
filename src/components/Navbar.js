@@ -37,6 +37,13 @@ function NavigationBar() {
             >
               Sign Up
             </Link>
+            <Link
+              style={{ padding: "1.5rem" }}
+              className="nav-Link"
+              to="/courier_signup"
+            >
+              Be a courier
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

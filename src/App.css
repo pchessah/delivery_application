@@ -74,11 +74,14 @@
 }
 
 /*SIGN UP  AND LOGIN FORM*/
+.signup{
+  font-size: smaller;
+}
 .signup input[type="email"],
 .signup input[type="number"],
 .signup input[type="password"] {
   width: 100%;
-  padding: 7.5px;
+  padding: 5.5px;
   margin: 5px 0 11px 0;
   display: inline-block;
   border: none;
@@ -99,7 +102,7 @@ input[type="password"]:focus {
 .signup button {
   background-color: #4caf50;
   color: white;
-  padding: 10px 12px;
+  padding: 8px 10px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
@@ -300,4 +303,10 @@ textarea {
   font-family: "Baloo Bhaina 2", cursive;
 
   color: white;
+}
+
+
+/*COURIER HOME*/
+.courierHome{
+  width: 30rem;
 }

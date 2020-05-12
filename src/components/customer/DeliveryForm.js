@@ -12,17 +12,25 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
-  Input
+  Input,
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import classnames from "classnames";
 import { FaMotorcycle, FaBabyCarriage, FaTruckPickup } from "react-icons/fa";
 import { places } from "./places";
+import PlacesAutocomplete, {
+  geocodeByAddress,
+  getLatLng,
+} from "react-places-autocomplete";
 
 function DeliveryForm(props) {
   const [priceMotorCycle, setPriceMotorCycle] = useState(null);
   const [priceTukTuk, setTukTuk] = useState(null);
   const [pricePick, setPricePick] = useState(null);
+
+  const [destination, setDestination] = useState("");
+  const [pickUpLocation, setPickUpLocation] = useState("LakeHub");
+  const [pickUpTime, setPickUpTime] = useState(null);
 
   const { className } = props;
   const [modal, setModal] = useState(false);
@@ -31,30 +39,40 @@ function DeliveryForm(props) {
 
   const handleCalculatePrice = (e) => {
     const distance = e.target.value;
-    let cash;
+    let cashM;
     let cashT;
     let cashP;
     if (distance < 3) {
-      cash = 50;
+      cashM = 50;
       cashT = 40;
       cashP = 150;
-      setPriceMotorCycle(cash);
+      setPriceMotorCycle(cashM);
       setTukTuk(cashT);
       setPricePick(cashP);
-      localStorage.setItem("priceMotorcycle", JSON.stringify(cash));
+      localStorage.setItem("priceMotorcycle", JSON.stringify(cashM));
       localStorage.setItem("priceFoot", JSON.stringify(cashT));
       localStorage.setItem("pricePick", JSON.stringify(cashP));
     } else if (distance > 3) {
-      cash = Math.ceil(17 * (distance - 3) + 50);
+      cashM = Math.ceil(17 * (distance - 3) + 50);
       cashT = Math.ceil(15 * (distance - 3) + 40);
       cashP = Math.ceil(50 * (distance - 3) + 150);
-      setPriceMotorCycle(cash);
+      setPriceMotorCycle(cashM);
       setTukTuk(cashT);
       setPricePick(cashP);
-      localStorage.setItem("priceMotorcycle", JSON.stringify(cash));
+      localStorage.setItem("priceMotorcycle", JSON.stringify(cashM));
       localStorage.setItem("priceFoot", JSON.stringify(cashT));
       localStorage.setItem("pricePick", JSON.stringify(cashP));
     }
+  };
+
+  const pickMotorcycle = (e) => {
+    console.log("picked motorcycle");
+    toggleModal();
+  };
+  const handleSelectDestination = async (value) => {
+    const results = await geocodeByAddress(value);
+    setDestination(value);
+    const latlng = await getLatLng(results[0]);
   };
 
   const toggle = (tab) => {
@@ -120,13 +138,52 @@ function DeliveryForm(props) {
                 <form className="deliveryform1">
                   <div className="row">
                     <div className="col-75">
+                      {/* <PlacesAutocomplete
+                        value={destination}
+                        onChange={setDestination}
+                        onSelect={handleSelectDestination}
+                      >
+                        {({
+                          getInputProps,
+                          suggestions,
+                          getSuggestionItemProps,
+                          loading,
+                        }) => (
+                          <div>
+                            <input
+                              {...getInputProps({
+                                placeholder: "enter pick up location",
+                              })}
+                            />
+                            <div>
+                              {loading ? <div> ...loading </div> : null}
+                              {suggestions.map((suggestion) => {
+                                const style = {
+                                  backgroundColor: suggestion.active
+                                    ? "#bcb553"
+                                    : "#fff",
+                                };
+                                return (
+                                  <div
+                                    {...getSuggestionItemProps(suggestion, {
+                                      style,
+                                    })}
+                                  >
+                                    {suggestion.description}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        )}
+                      </PlacesAutocomplete> */}
                       <Input
                         type="select"
                         id="fname"
                         name="firstname"
                         placeholder="select pick up location"
                       >
-                        <option>LakeHub, Okore Road</option>
+                        <option>{pickUpLocation}</option>
                       </Input>
                     </div>
                   </div>
@@ -167,7 +224,7 @@ function DeliveryForm(props) {
                       <Button
                         color="success"
                         style={{ padding: "1rem", width: "19.2rem" }}
-                        onClick={toggleModal}
+                        onClick={toggleModal && pickMotorcycle}
                       >
                         Make Order
                       </Button>
@@ -184,7 +241,7 @@ function DeliveryForm(props) {
                 <form className="deliveryform1">
                   <div className="row">
                     <div className="col-75">
-                    <Input
+                      <Input
                         type="select"
                         id="fname"
                         name="firstname"
@@ -196,7 +253,7 @@ function DeliveryForm(props) {
                   </div>
                   <div className="row">
                     <div className="col-75">
-                    <Input type="select" onChange={handleCalculatePrice}>
+                      <Input type="select" onChange={handleCalculatePrice}>
                         <option> Choose Destination </option>
                         {places.map(({ name, distance }, i) => (
                           <option key={i} value={distance}>
@@ -249,7 +306,7 @@ function DeliveryForm(props) {
                 <form className="deliveryform1">
                   <div className="row">
                     <div className="col-75">
-                    <Input
+                      <Input
                         type="select"
                         id="fname"
                         name="firstname"
@@ -261,7 +318,7 @@ function DeliveryForm(props) {
                   </div>
                   <div className="row">
                     <div className="col-75">
-                    <Input type="select" onChange={handleCalculatePrice}>
+                      <Input type="select" onChange={handleCalculatePrice}>
                         <option> Choose Destination </option>
                         {places.map(({ name, distance }, i) => (
                           <option key={i} value={distance}>
@@ -286,7 +343,8 @@ function DeliveryForm(props) {
                   <div className="row">
                     <div className="col-75">
                       <section className="totalDeliveryForm">
-                        {pricePick}<FaTruckPickup />
+                        {pricePick}
+                        <FaTruckPickup />
                       </section>
                     </div>
                   </div>
