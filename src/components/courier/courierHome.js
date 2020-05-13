@@ -11,32 +11,25 @@ function courierHome() {
               <th>#</th>
               <th>Customer Name</th>
               <th>Customer Contact</th>
-              <th>Username</th>
+              <th>Pick Up location</th>
+              <th>Pick Up Time</th>
+              <th>Destination</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">1</th>
               <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <td>0706165412</td>
+              <td>LakeHub</td>
+              <td>12.30</td>
+              <td>Lolwe Estate</td>
             </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
+           
           </tbody>
         </Table>
       </section>
-      <section>profile</section>
+     
     </div>
   );
 }

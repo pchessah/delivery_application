@@ -308,5 +308,8 @@ textarea {
 
 /*COURIER HOME*/
 .courierHome{
-  width: 30rem;
+  margin-top: 1rem;
+  width: 40rem;
+  font-size: smaller;
+  box-shadow: 2px 2px 20px 2px grey;
 }
