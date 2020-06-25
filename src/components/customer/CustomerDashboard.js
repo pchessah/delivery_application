@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import * as ROUTES from "../../constants/routes"
 
 function CustomerDashboard() {
   return (
@@ -8,7 +9,7 @@ function CustomerDashboard() {
       <div className="customerDashboard">
         <section className="pickupsection">
           <h3 style={{ paddingBottom: "1.3rem" }}>Delivery</h3>
-          <Link to="/delivery_form">
+          <Link to={ROUTES.DELIVERY_FORM}>
             <div>
               <img
                 style={{ borderRadius: "3rem" }}
@@ -26,13 +27,13 @@ function CustomerDashboard() {
               <li>Have them delivered to your prefered location</li>
             </ul>
           </section>
-          <Link to="/delivery_form">
+          <Link to={ROUTES.DELIVERY_FORM}>
             <button>Set Pick Up location</button>
           </Link>
         </section>
         <section className="vendorsection">
           <h3 style={{ paddingBottom: "1.3rem" }}>View Vendors</h3>
-          <Link to="/delivery_form">
+          <Link to={ROUTES.DELIVERY_FORM}>
             <div>
               <img
                 style={{ borderRadius: "3rem" }}

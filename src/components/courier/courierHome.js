@@ -14,6 +14,7 @@ function courierHome() {
               <th>Pick Up location</th>
               <th>Pick Up Time</th>
               <th>Destination</th>
+              <th>Accept Order?</th>
             </tr>
           </thead>
           <tbody>
@@ -24,6 +25,7 @@ function courierHome() {
               <td>LakeHub</td>
               <td>12.30</td>
               <td>Lolwe Estate</td>
+              <td><button color="primary">Take Order</button></td>
             </tr>
            
           </tbody>

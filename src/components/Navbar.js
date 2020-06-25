@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
+import * as ROUTES from "../constants/routes"
 
 
 function NavigationBar() {
@@ -18,7 +19,7 @@ function NavigationBar() {
           <Link
               style={{ padding: "1.5rem" }}
               className="nav-Link"
-              to="/"
+              to={ROUTES.LANDING}
             >
               Home
             </Link>
@@ -26,21 +27,21 @@ function NavigationBar() {
             <Link
               style={{ padding: "1.5rem" }}
               className="nav-Link"
-              to="/customer_login"
+              to={ROUTES.SIGN_IN}
             >
               Log In
             </Link>
             <Link
               style={{ padding: "1.5rem" }}
               className="nav-Link"
-              to="/customer_signup"
+              to={ROUTES.SIGN_UP}
             >
               Sign Up
             </Link>
             <Link
               style={{ padding: "1.5rem" }}
               className="nav-Link"
-              to="/courier_signup"
+              to={ROUTES.SIGN_UP}
             >
               Be a courier
             </Link>

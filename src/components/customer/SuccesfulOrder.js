@@ -4,7 +4,7 @@ import { Jumbotron, Button } from "reactstrap";
 function SuccesfulOrder() {
   return (
     <div className="successfulDelivery">
-      <Jumbotron style={{ background: "transparent"}}>
+      <Jumbotron style={{ background: "transparent" }}>
         <h1 className="display-3">Success!</h1>
         <p className="lead">Your product is on the way</p>
         <hr className="my-2" />

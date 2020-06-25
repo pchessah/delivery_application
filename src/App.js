@@ -3,18 +3,15 @@ import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import Login from "./components/customer/LogIn";
-import SignUp from "./components/customer/SignUp";
 import ConfirmDelivery from "./components/customer/ConfirmDelivery";
-import SizeSelection from "./components/customer/SizeSelection";
-import OrderConfirmed from "./components/customer/OrderConfirmed";
 import CustomerDashboard from "./components/customer/CustomerDashboard";
 import DeliveryForm from "./components/customer/DeliveryForm";
 import SuccesfulOrder from "./components/customer/SuccesfulOrder";
-import courierSignUp from "./components/courier/courierSignUp";
-import courierLogin from "./components/courier/courierLogin";
 import courierHome from "./components/courier/courierHome";
-
+import SignInPage from "./components/SignIn";
+import SignUp from "./components/SignUp";
+import * as ROUTES from "./constants/routes";
+import Home_logged_in from "./components/Home_logged_in";
 
 function App() {
   return (
@@ -22,17 +19,26 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/customer_login" component={Login} />
-        <Route path="/customer_signup" component={SignUp} />
-        <Route path="/confirm_delivery" component={ConfirmDelivery} />
-        <Route path="/size_selection" component={SizeSelection} />
-        <Route path="/order_confirmed" component={OrderConfirmed} />
-        <Route path="/customer_dashboard" component={CustomerDashboard}/>
-        <Route path="/delivery_form" component={DeliveryForm}/>
-        <Route path="/successful_order" component={SuccesfulOrder}/>
-        <Route path="/courier_signup" component={courierSignUp}/>
-        <Route path="/courier_login" component={courierLogin}/>
-        <Route path="/courier_home" component={courierHome}/>
+        <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
+        <Route exact path={ROUTES.SIGN_UP} component={SignUp} />
+        <Route
+          exact
+          path={ROUTES.CONFIRM_DELIVERY}
+          component={ConfirmDelivery}
+        />
+        <Route
+          exact
+          path={ROUTES.CUSTOMER_DASHBOARD}
+          component={CustomerDashboard}
+        />
+        <Route exact path={ROUTES.DELIVERY_FORM} component={DeliveryForm} />
+        <Route
+          exact
+          path={ROUTES.SUCCESSFUL_ORDER}
+          component={SuccesfulOrder}
+        />
+        <Route exact path={ROUTES.COURIER_HOME} component={courierHome} />
+        <Route exact path={ROUTES.HOME} component={Home_logged_in}/>
       </Switch>
     </>
   );

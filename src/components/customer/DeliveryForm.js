@@ -22,6 +22,7 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
+import * as ROUTES from "../../constants/routes"
 
 function DeliveryForm(props) {
   const [priceMotorCycle, setPriceMotorCycle] = useState(null);
@@ -29,7 +30,7 @@ function DeliveryForm(props) {
   const [pricePick, setPricePick] = useState(null);
 
   const [destination, setDestination] = useState("");
-  const [pickUpLocation, setPickUpLocation] = useState("LakeHub");
+  const [pickUpLocation, setPickUpLocation] = useState("LakeHub, Okore Road");
   const [pickUpTime, setPickUpTime] = useState(null);
 
   const { className } = props;
@@ -86,7 +87,7 @@ function DeliveryForm(props) {
           <ModalHeader toggle={toggleModal}>Confrim</ModalHeader>
           <ModalBody>Would You like to confirm Order?</ModalBody>
           <ModalFooter>
-            <Link to="/successful_order">
+            <Link to={ROUTES.SUCCESSFUL_ORDER}>
               <Button color="success" onClick={toggleModal}>
                 Yes
               </Button>{" "}
@@ -201,12 +202,13 @@ function DeliveryForm(props) {
                   </div>
                   <div className="row">
                     <div className="col-75">
-                      <input
-                        type="text"
-                        id="lname"
-                        name="lastname"
-                        placeholder="pick up time"
-                      />
+                      <select type="select" id="lname" name="lastname">
+                        <option>Set Pick Up Time</option>
+                        <option>Immediately</option>
+                        <option>In One (1) hour</option>
+                        <option> In Three (3) hours</option>
+                        <option> In Six (6) hours</option>
+                      </select>
                     </div>
                   </div>
                   <hr style={{ backgroundColor: "grey" }} />
@@ -265,12 +267,13 @@ function DeliveryForm(props) {
                   </div>
                   <div className="row">
                     <div className="col-75">
-                      <input
-                        type="text"
-                        id="lname"
-                        name="lastname"
-                        placeholder="set destination"
-                      />
+                      <select type="select" id="lname" name="lastname">
+                        <option>Set Pick Up Time</option>
+                        <option>Immediately</option>
+                        <option>In One (1) hour</option>
+                        <option> In Three (3) hours</option>
+                        <option> In Six (6) hours</option>
+                      </select>
                     </div>
                   </div>
                   <hr style={{ backgroundColor: "grey" }} />
@@ -330,12 +333,13 @@ function DeliveryForm(props) {
                   </div>
                   <div className="row">
                     <div className="col-75">
-                      <input
-                        type="text"
-                        id="lname"
-                        name="lastname"
-                        placeholder="set destination"
-                      />
+                      <select type="select" id="lname" name="lastname">
+                        <option>Set Pick Up Time</option>
+                        <option>Immediately</option>
+                        <option>In One (1) hour</option>
+                        <option> In Three (3) hours</option>
+                        <option> In Six (6) hours</option>
+                      </select>
                     </div>
                   </div>
                   <hr style={{ backgroundColor: "grey" }} />
